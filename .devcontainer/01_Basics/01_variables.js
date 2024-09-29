@@ -12,4 +12,6 @@ function addStrings(str1, str2) {
 
 // Example usage:
 console.log(addStrings("Good ", "Morning!"));
+console.log("Khas");
+
   // Output: "Good Morning!"

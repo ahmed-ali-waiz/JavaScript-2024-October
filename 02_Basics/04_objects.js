@@ -25,3 +25,10 @@ const obj = {...user, ...newUser};// we merge both objcts by using spread operat
 console.log(Object.keys(user));
 console.log(Object.values(user));
 console.log(Object.entries(user));
+
+
+// objects de-Structure
+
+const {id: userid}= user;
+
+console.log(userid)

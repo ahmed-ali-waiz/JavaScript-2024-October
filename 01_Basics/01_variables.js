@@ -29,7 +29,7 @@ console.log(passward);
 
 if (true) {
     let Ahmad = 123;
-    // let Ahmad = 321;       it will throw error.
+    // let Ahmad = 321;      // it will throw error.
     Ahmad = 321;
     console.log(Ahmad);
 }

@@ -25,6 +25,10 @@ function calculateMartP(val1,val2, ...num1){
 
 console.log(calculateMartP(400,200,467,399,700))
 
+
+//passing objects to function
+
+
 const user = {
     username : "Ahmad",
     age : 20,
@@ -33,4 +37,20 @@ function objectsPassing(anyobject){
     console.log(`username is ${anyobject.username} and age is ${anyobject.age}`)
 }
 
-handleo
+objectsPassing(user)
+
+//we can pass the object directly
+
+objectsPassing({
+    username:"ali",
+    age:12
+})
+
+const arr = [2,3,4,5]
+
+function myarr(waiz){
+    return waiz[2]
+}
+
+console.log(myarr(arr));
+console.log(myarr([200,33,66,77]));

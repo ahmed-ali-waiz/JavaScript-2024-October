@@ -18,7 +18,7 @@ if (email) {
 
 let arr = [];
 
-if (arr.length===0) {
+if (arr.length===1) {
     console.log("array");
     
 } else {

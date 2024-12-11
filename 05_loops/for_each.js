@@ -33,6 +33,6 @@ const myLan = [
 ]
 
 myLan.forEach( (item)=>{
-    console.log(item.fileName);
+    console.log(item.langName);
     
 } )

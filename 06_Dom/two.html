@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Learning</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: #ffffff;
+        }
+        .nee{
+            color: #212121;
+            background-color: khaki;
+        }
+        .btn{
+            color: #212121;
+            background-color: yellow;
+            display: flex;
+            margin-top: 20px;
+            padding: 18px;
+            font-size: 18px;
+        }
+       .Buton{
+        background-color: blueviolet;
+       }
+    </style>
+</head>
+<body>
+
+    <h1 id="hamid">
+       Ahmad Ali 
+    </h1>
+   
+   <span class="Buton"></span>
+
+</body>
+<script>
+
+    //create new Elements
+
+let btn = document.createElement("button")
+
+let btn2 = document.querySelector(".Buton")
+
+
+    let h1 = document.getElementById("hamid")
+ const button = document.createElement("button")
+ button.innerHTML = "waiz";
+ button.classList.add("btn")
+ h1.appendChild(button)
+
+ button.addEventListener("click",()=>{
+    button.innerHTML = "button Clicked"
+    button.style.color = "red"
+    button.style.backgroundColor = "green"
+ })
+btn.innerHTML = "New Button";
+btn2.appendChild(btn);
+btn.classList.add("nee")
+ 
+</script>
+</html>

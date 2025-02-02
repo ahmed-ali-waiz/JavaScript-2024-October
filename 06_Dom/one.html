@@ -22,6 +22,12 @@
     <h2 class="heading">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil, quam. Eius, eaque.
     </h2>
 
+    <div id="container">
+      <button id="btn">
+        Click me
+      </button>
+    </div>
+
     <ul>
       <li class="list-item">one</li>
       <li class="list-item">two</li>
@@ -33,10 +39,19 @@
 </body>
 
 <script>
+
+  //By querySelectorAll
   const templist = document.querySelectorAll('.list-item'); // Select all list items
   templist.forEach((l) => {
     l.style.color = 'yellow'; 
   });
+
+  //By id
+  let btn1 = document.getElementById("btn");
+
+  btn1.addEventListener("click",()=>{
+    btn1.style.backgroundColor = "red";
+  })
 </script>
 
 </html>

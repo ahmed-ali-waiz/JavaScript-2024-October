@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            margin: 20px;
+        }
+        #btn{
+            margin: 20px;
+            padding: 10px;
+            text-align: center;
+            font-size: 15px;
+        }
+        .input{
+            margin: 20px;
+        }
+        ul li {
+            background-color: navajowhite;
+            width: 240px;
+        }
+        .remove{
+            margin: 15px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <input type="text" class="input" placeholder="Enter a text">
+   
+
+        <button id="btn">
+            Enter
+        </button>
+    </div>
+    <ul id="list">
+
+    </ul>
+</body>
+
+<script>
+
+    
+        // Add by textNode
+
+    // let para = document.createElement("p");
+
+    // let text = document.createTextNode("This is new paragraph");
+
+    // para.appendChild(text)
+    // document.body.appendChild(para)
+
+    let input = document.querySelector(".input")
+    let btn = document.getElementById("btn")
+    let uli = document.getElementById("list")
+
+    btn.addEventListener("click",()=>{
+
+        let li = document.createElement("li")
+        li.innerHTML = input.value;
+        li.style.listStyle = "none";
+    uli.appendChild(li);
+
+    let removeBtn = document.createElement("button")
+
+    removeBtn.innerHTML = "Delete";
+    removeBtn.classList.add("remove")
+    li.appendChild(removeBtn)
+
+    removeBtn.addEventListener("click",()=>{
+        li.remove();
+    })
+  
+    input.value="";
+    });
+</script>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Start should change backGround color every second</h1>
+    <button class="start">start</button>
+    <button class="stop">stop</button>
+</body>
+<script>
+
+    let randomColor = (()=>{
+        let hex = "0123456789ABCDEF"
+    let color = "#"
+    for (let i = 0; i < 6; i++) {
+        color+= hex[Math.floor(Math.random()*16)];  
+    }
+    return color;
+    })
+
+
+    let interval;
+  let  startChangingColor = (()=>{
+
+  interval =  setInterval(ChangeBgColor,1000)
+
+    function ChangeBgColor() {
+        document.body.style.backgroundColor = randomColor()
+    }
+  })
+
+  let start = document.querySelector('.start')
+start.addEventListener('click',startChangingColor)
+
+let  stopChangingColor = (()=>{
+
+clearInterval(interval)
+
+
+})
+  let stop = document.querySelector('.stop')
+stop.addEventListener('click',stopChangingColor)
+
+</script>
+</html>
